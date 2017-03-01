@@ -3,7 +3,7 @@
     function filterMaker(threshold) {
         return function (x) {
             if (!x.length) throw new Error("filter works only for items with length field");
-            if (x.length < 1) return false;
+            if (x.length < threshold) return false;
             return true;
         };
     }
